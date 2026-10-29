@@ -1,0 +1,34 @@
+{
+  "name": "trilio-tsr-guide",
+  "version": "0.1.0",
+  "description": "Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely.",
+  "author": {
+    "name": "Trilio TSR Team",
+    "email": "tsr-team@trilio.io"
+  },
+  "homepage": "https://github.com/somesh22123/trilio-plugins",
+  "repository": "https://github.com/somesh22123/trilio-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "trilio",
+    "tsr",
+    "disaster-recovery",
+    "kubernetes",
+    "openshift"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Trilio Site Recovery Guide",
+    "shortDescription": "Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely.",
+    "developerName": "Trilio TSR Team",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Check TSR DR readiness in this cluster",
+      "Plan a failover for my protected apps"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+# Each SKU team reviews only its own folder. Shared files need the repo owners.
+# On the Trilio org these become @trilio/tsr-team, @trilio/t4k-team, @trilio/platform.
+*                    @somesh22123
+/plugins/tsr/        @somesh22123
+/evals/tsr/          @somesh22123
+/plugins/t4k/        @somesh22123
+/evals/t4k/          @somesh22123
+/.claude-plugin/     @somesh22123
+/.agents/            @somesh22123
+/.cursor-plugin/     @somesh22123
+/.github/            @somesh22123

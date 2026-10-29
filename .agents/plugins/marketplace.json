@@ -1,0 +1,32 @@
+{
+  "name": "trilio-plugins",
+  "interface": {
+    "displayName": "Trilio"
+  },
+  "plugins": [
+    {
+      "name": "trilio-tsr-guide",
+      "source": {
+        "source": "local",
+        "path": "./plugins/tsr"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "trilio-t4k-guide",
+      "source": {
+        "source": "local",
+        "path": "./plugins/t4k"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

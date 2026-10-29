@@ -1,0 +1,23 @@
+{
+  "name": "trilio-plugins",
+  "owner": {
+    "name": "Trilio",
+    "email": "platform@trilio.io"
+  },
+  "metadata": {
+    "description": "Trilio agent plugins for every SKU.",
+    "pluginRoot": "plugins"
+  },
+  "plugins": [
+    {
+      "name": "trilio-tsr-guide",
+      "source": "tsr",
+      "description": "Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely."
+    },
+    {
+      "name": "trilio-t4k-guide",
+      "source": "t4k",
+      "description": "Helps AI coding agents check backups and plan restores with Trilio for Kubernetes (T4K) safely."
+    }
+  ]
+}

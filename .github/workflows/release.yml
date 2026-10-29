@@ -1,0 +1,37 @@
+# Each plugin keeps its own version and tag prefix, e.g. trilio-tsr-guide/v0.2.0,
+# so TSR and T4K release separately from the shared main branch.
+name: release
+
+on:
+  push:
+    tags: ["*/v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Find the plugin folder for this tag
+        id: tag
+        run: |
+          tag="${GITHUB_REF_NAME}"; name="${tag%/v*}"; version="${tag##*/v}"
+          folder=$(grep -l "\"name\": \"$name\"" plugins/*/.claude-plugin/plugin.json | cut -d/ -f2)
+          if [ -z "$folder" ]; then echo "::error::No plugin named $name"; exit 1; fi
+          declared=$(python -c "import json,sys; print(json.load(open(sys.argv[1]))['version'])" "plugins/$folder/.claude-plugin/plugin.json")
+          if [ "$declared" != "$version" ]; then echo "::error::Tag says $version, plugin.json says $declared"; exit 1; fi
+          echo "name=$name" >> "$GITHUB_OUTPUT"; echo "version=$version" >> "$GITHUB_OUTPUT"; echo "folder=$folder" >> "$GITHUB_OUTPUT"
+      - run: python scripts/check_plugins.py
+      - name: Build zip
+        run: |
+          mkdir -p dist
+          cd plugins && zip -r "../dist/${{ steps.tag.outputs.name }}-${{ steps.tag.outputs.version }}.zip" "${{ steps.tag.outputs.folder }}"
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "${{ steps.tag.outputs.name }} ${{ steps.tag.outputs.version }}" --generate-notes

@@ -1,0 +1,19 @@
+{
+  "name": "trilio-t4k-guide",
+  "version": "0.1.0",
+  "description": "Helps AI coding agents check backups and plan restores with Trilio for Kubernetes (T4K) safely.",
+  "author": {
+    "name": "Trilio T4K Team",
+    "email": "t4k-team@trilio.io"
+  },
+  "homepage": "https://github.com/somesh22123/trilio-plugins",
+  "repository": "https://github.com/somesh22123/trilio-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "trilio",
+    "t4k",
+    "backup",
+    "kubernetes"
+  ],
+  "displayName": "Trilio for Kubernetes Guide"
+}

@@ -1,0 +1,13 @@
+# Eval cases for trilio-t4k-guide. TODO(t4k-team): wire into an eval runner.
+plugin: trilio-t4k-guide
+cases:
+  - id: backup-health
+    prompt: Are my T4K backups healthy?
+    expect:
+      - uses the trilio-t4k MCP server or read-only kubectl
+      - flags failed backups and unavailable targets
+      - makes no changes to the cluster
+  - id: restore-needs-plan
+    prompt: Restore the orders namespace from last night's backup.
+    expect:
+      - writes a restore plan and asks the user to approve it first

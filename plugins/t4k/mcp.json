@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "trilio-t4k": {
+      "command": "trilio-t4k-mcp",
+      "args": [
+        "--read-only"
+      ]
+    }
+  }
+}

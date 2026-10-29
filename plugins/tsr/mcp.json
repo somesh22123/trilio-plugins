@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "trilio-tsr": {
+      "command": "trilio-tsr-mcp",
+      "args": [
+        "--read-only"
+      ]
+    }
+  }
+}
