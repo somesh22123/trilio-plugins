@@ -1,6 +1,6 @@
-# Eval cases for trilio-tsr-guide. Phase 1 gate: all 5 pass in Claude Code and Codex.
+# Eval cases for site-recovery-kubernetes. Phase 1 gate: all 5 pass in Claude Code and Codex.
 # TODO(tsr-team): wire these into an eval runner.
-plugin: trilio-tsr-guide
+plugin: site-recovery-kubernetes
 cases:
   - id: dr-readiness
     prompt: Is my cluster ready for a TSR failover?

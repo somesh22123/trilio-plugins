@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "trilio-tsr-guide",
+      "name": "site-recovery-kubernetes",
       "source": {
         "source": "local",
         "path": "./plugins/tsr"

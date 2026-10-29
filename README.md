@@ -24,7 +24,7 @@ trilio-plugins/
 
 ```sh
 claude plugin marketplace add somesh22123/trilio-plugins
-claude plugin install trilio-tsr-guide@trilio-plugins
+claude plugin install site-recovery-kubernetes@trilio-plugins
 claude plugin install trilio-t4k-guide@trilio-plugins
 ```
 
@@ -39,7 +39,7 @@ codex plugin marketplace add somesh22123/trilio-plugins
 1. Each SKU team edits only its own folder; CODEOWNERS routes reviews to that team.
 2. One CI pipeline (`scripts/check_plugins.py` + tests) checks every plugin on every change.
 3. Each plugin keeps its own version and tag prefix, so TSR and T4K release separately:
-   bump `version` in all three of the plugin's manifests, then tag `trilio-tsr-guide/v0.2.0`.
+   bump `version` in all three of the plugin's manifests, then tag `site-recovery-kubernetes/v0.2.0`.
 4. Customers add this repo once and install any plugin from it.
 
 ## No generator (yet)

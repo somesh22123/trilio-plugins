@@ -1,5 +1,5 @@
 {
-  "name": "trilio-tsr-guide",
+  "name": "site-recovery-kubernetes",
   "version": "0.1.0",
   "description": "Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely.",
   "author": {
@@ -16,7 +16,7 @@
     "kubernetes",
     "openshift"
   ],
-  "displayName": "Trilio Site Recovery Guide",
+  "displayName": "Trilio Site Recovery for Kubernetes",
   "skills": "./skills/",
   "agents": "./agents/"
 }

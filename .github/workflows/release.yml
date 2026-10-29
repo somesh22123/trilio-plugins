@@ -1,4 +1,4 @@
-# Each plugin keeps its own version and tag prefix, e.g. trilio-tsr-guide/v0.2.0,
+# Each plugin keeps its own version and tag prefix, e.g. site-recovery-kubernetes/v0.2.0,
 # so TSR and T4K release separately from the shared main branch.
 name: release
 

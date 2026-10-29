@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "trilio-tsr-guide",
+      "name": "site-recovery-kubernetes",
       "source": "tsr",
       "description": "Helps AI coding agents check DR readiness and plan failovers with Trilio Site Recovery (TSR) safely."
     },
